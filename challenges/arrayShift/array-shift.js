@@ -1,6 +1,9 @@
 'use strict';
 
 function insertShiftArray(arr, value) {
+  if (!(arr && value)) {
+    throw new Error('Please insert a valid arguments');
+  }
   var m = Math.ceil(arr.length / 2);
   var c = 0,
     o = 0,
@@ -21,3 +24,5 @@ function insertShiftArray(arr, value) {
 // insertShiftArray([2, 4, 6, 8], 5);
 
 // insertShiftArray([4, 8, 15, 23, 42], 16);
+
+module.exports.insertShiftArray = insertShiftArray;
