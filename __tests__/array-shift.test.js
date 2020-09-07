@@ -5,6 +5,7 @@ const arrayShift = require('../challenges/arrayShift/array-shift.js');
 console.log('arrayShift', arrayShift);
 
 describe('arrayShift Module', () => {
+
   it('insertShiftArray() give a valid output', () => {
     let arr = [2, 4, 6, 8];
     let val = 5;
