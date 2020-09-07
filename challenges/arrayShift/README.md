@@ -10,7 +10,7 @@ We knew that we wanted to find the middle index of the initial array, so we want
 
 ## Solution
 
-- [link to code ](./arr-shift.js)
+- [link to code ](./array-shift.js)
 
 ![image](../../assets/arrayShift.JPG)
 
