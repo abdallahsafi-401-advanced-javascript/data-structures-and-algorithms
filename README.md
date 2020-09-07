@@ -6,4 +6,4 @@
 
 \# |  Link 
 --------- | ------------- 
- 1 | [Code Challenge 01: Array Reverse](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/code-challenges/arrayReverse) 
+ 1 | [Code Challenge 01: Array Reverse](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/arrayReverse) 
