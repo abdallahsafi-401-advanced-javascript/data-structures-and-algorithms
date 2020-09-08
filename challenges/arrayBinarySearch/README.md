@@ -12,6 +12,6 @@ Iterative approach, we will use a while loop and the loop will run until it hits
 
 - [link to code ](./array-binary-search.js)
 
-![image](../../assets/arrayBinarySearch.JPG.JPG)
+![image](../../assets/arrayBinarySearch.JPG)
 
 
