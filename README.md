@@ -8,3 +8,4 @@
 --------- | ------------- 
  1 | [Code Challenge 01: Array Reverse](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/arrayReverse) 
  2 | [Code Challenge 02: Array Shift](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/arrayShift) 
+ 3 | [Code Challenge 03: Binary Search](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/arrayBinarySearch) 
