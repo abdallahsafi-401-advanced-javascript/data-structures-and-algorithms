@@ -7,6 +7,9 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 ## Approach & Efficiency
 Iterative approach, we will use a while loop and the loop will run until it hits the base condition i.e start becomes greater than end.
 
+- Big (O):
+ 1. space: O(1)
+ 2. time: O(log N)
 
 ## Solution
 
