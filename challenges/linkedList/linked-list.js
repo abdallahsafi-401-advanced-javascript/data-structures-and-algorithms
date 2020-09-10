@@ -8,8 +8,8 @@ class LinkedList {
     this.size = 0;
   }
 
-  append(element) {
-    const node = new Node(element);
+  insert(value) {
+    const node = new Node(value);
     if (!this.head) {
       this.head = node;
       return this;
@@ -22,6 +22,27 @@ class LinkedList {
     current.next = node;
     this.size++;
     return this;
+  }
+
+  include(value) {
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
+
+  toString() {
+    let current = this.head;
+    let str = '';
+    while (current) {
+      str += `{ ${current.value} } -> `;
+      current = current.next;
+    }
+    return `${str}NULL`;
   }
 }
 
