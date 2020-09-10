@@ -2,8 +2,6 @@
 
 const arrayBinarySearch = require('../challenges/arrayBinarySearch/array-binary-search.js');
 
-console.log('arrayBinarySearch', arrayBinarySearch);
-
 describe('arrayBinarySearch Module', () => {
 
   it('binarySearch() give the index', () => {
