@@ -1,14 +1,16 @@
 'use strict';
 
 const LinkedList = require('../challenges/linkedList/linked-list.js');
+const CustomError = require('../challenges/linkedList/customError.js');
+
 
 describe('LinkedList Module', () => {
-  it('constructor()', ()=> {
+  it('constructor()', () => {
     let list = new LinkedList();
     expect(list.head).toBeNull();
   });
 
-  it('insert()', ()=> {
+  it('insert()', () => {
     let list = new LinkedList();
     let initialValue = 'First One';
     list.insert(initialValue);
@@ -20,7 +22,16 @@ describe('LinkedList Module', () => {
     expect(list.head.next.value).toEqual(newValue);
   });
 
-  it('include()', ()=> {
+  it('insert() should throw error if passed no arguments', () => {
+    try {
+      let list = new LinkedList();
+      list.insert();
+    } catch (error) {
+      expect(error).toEqual(new CustomError('Invalid value!'));
+    }
+  });
+
+  it('include()', () => {
     let list = new LinkedList();
     let first = 1;
     list.insert(first);
@@ -32,7 +43,7 @@ describe('LinkedList Module', () => {
     expect(list.include(5)).toBe(false);
   });
 
-  it('toString()', ()=> {
+  it('toString()', () => {
     let list = new LinkedList();
     let first = 'a';
     list.insert(first);
@@ -41,5 +52,14 @@ describe('LinkedList Module', () => {
     let third = 'c';
     list.insert(third);
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
+  });
+
+  it('toString() should throw error if linked list is empty', () => {
+    try {
+      let list = new LinkedList();
+      list.toString();
+    } catch (error) {
+      expect(error).toEqual(new CustomError('this linked list is empty!'));
+    }
   });
 });

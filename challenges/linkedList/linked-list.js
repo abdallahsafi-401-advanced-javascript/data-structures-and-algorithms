@@ -12,7 +12,7 @@ class LinkedList {
   // adding new value
   insert(value) {
     if(!value){
-      throw new CustomError('Invalid value !');
+      throw new CustomError('Invalid value!');
     }
     const node = new Node(value);
     if (!this.head) {
