@@ -9,8 +9,8 @@ function reverseArray(arr) {
   }
   return reversedArr;
 }
-
 //test the function
 let arr = [1, 2, 3, 4, 5, 6];
 let res = reverseArray(arr);
 console.log(res);
+

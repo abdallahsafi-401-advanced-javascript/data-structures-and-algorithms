@@ -12,7 +12,7 @@ function matrixSum(matrix){
       temp += matrix[i][j];
     }
     result[i] = temp;
-    temp = 0
+    temp = 0;
   }
   return result;
 }

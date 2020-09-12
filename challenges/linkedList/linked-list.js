@@ -3,7 +3,6 @@
 const Node = require('./node.js');
 const CustomError = require('./customError.js');
 
-
 class LinkedList {
   constructor() {
     this.head = null;
