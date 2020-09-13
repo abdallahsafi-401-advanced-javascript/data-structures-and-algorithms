@@ -1,7 +1,7 @@
 'use strict';
 
-const LinkedList = require('../challenges/linkedList/linked-list.js');
-const CustomError = require('../challenges/linkedList/customError.js');
+const LinkedList = require('../Data-Structures/linkedList/linked-list.js');
+const CustomError = require('../Data-Structures/linkedList/customError.js');
 
 
 describe('LinkedList Module', () => {
@@ -17,9 +17,9 @@ describe('LinkedList Module', () => {
     expect(list.head.value).toEqual(initialValue);
     let newValue = 'Second Value';
     list.insert(newValue);
-    expect(list.head.value).toEqual(initialValue);
+    expect(list.head.value).toEqual(newValue);
     expect(list.head.next).not.toBeNull();
-    expect(list.head.next.value).toEqual(newValue);
+    expect(list.head.next.value).toEqual(initialValue);
   });
 
   it('insert() should throw error if passed no arguments', () => {
@@ -43,14 +43,84 @@ describe('LinkedList Module', () => {
     expect(list.include(5)).toBe(false);
   });
 
+  it('append()', () => {
+    let list = new LinkedList();
+    let initialValue = 'First One';
+    list.append(initialValue);
+    expect(list.head.value).toEqual(initialValue);
+    let newValue = 'Second Value';
+    list.append(newValue);
+    expect(list.head.value).toEqual(initialValue);
+    expect(list.head.next).not.toBeNull();
+    expect(list.head.next.value).toEqual(newValue);
+  });
+
+  it('append() should throw error if passed no arguments', () => {
+    try {
+      let list = new LinkedList();
+      list.append();
+    } catch (error) {
+      expect(error).toEqual(new CustomError('Invalid value!'));
+    }
+  });
+
+
+  it('insertBefore() in the middle', () => {
+    let list = new LinkedList();
+    let first = 1;
+    list.append(first);
+    let second = 2;
+    list.append(second);
+    let third = 3;
+    list.append(third);
+    list.insertBefore(2, 34);
+    expect(list.toString()).toEqual('{ 1 } -> { 34 } -> { 2 } -> { 3 } -> NULL');
+  });
+
+  it('insertBefore() before the first', () => {
+    let list = new LinkedList();
+    let first = 1;
+    list.append(first);
+    let second = 2;
+    list.append(second);
+    let third = 3;
+    list.append(third);
+    list.insertBefore(1, 34);
+    expect(list.toString()).toEqual('{ 34 } -> { 1 } -> { 2 } -> { 3 } -> NULL');
+  });
+
+  it('insertAfter() in the middle', () => {
+    let list = new LinkedList();
+    let first = 1;
+    list.append(first);
+    let second = 2;
+    list.append(second);
+    let third = 3;
+    list.append(third);
+    list.insertAfter(2, 34);
+    expect(list.toString()).toEqual('{ 1 } -> { 2 } -> { 34 } -> { 3 } -> NULL');
+  });
+
+  it('insertAfter() after the last', () => {
+    let list = new LinkedList();
+    let first = 1;
+    list.append(first);
+    let second = 2;
+    list.append(second);
+    let third = 3;
+    list.append(third);
+    list.insertAfter(3, 34);
+    expect(list.toString()).toEqual('{ 1 } -> { 2 } -> { 3 } -> { 34 } -> NULL');
+  });
+
   it('toString()', () => {
     let list = new LinkedList();
     let first = 'a';
-    list.insert(first);
+    list.append(first);
     let second = 'b';
-    list.insert(second);
+    list.append(second);
     let third = 'c';
-    list.insert(third);
+    list.append(third);
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
   });
 
