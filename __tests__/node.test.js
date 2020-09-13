@@ -1,6 +1,6 @@
 'use strict';
 
-const Node = require('../challenges/linkedList/node.js');
+const Node = require('../Data-Structures/linkedList/node.js');
 
 
 describe('Node Module', () => {
