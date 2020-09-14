@@ -100,4 +100,9 @@ newLinkedList.insertAfter(value, newVal); \\return the linked list
 
 
 ## Solution
-![whiteboard](linked-list.jpg)
+![append](../../assets/append.JPG)
+
+![insertBefore](../../assets/insertBefore.JPG)
+
+![insertAfter](../../assets/insertAfter.JPG)
+
