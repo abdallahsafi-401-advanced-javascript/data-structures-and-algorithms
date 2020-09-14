@@ -89,6 +89,15 @@ describe('LinkedList Module', () => {
     expect(list.toString()).toEqual('{ 34 } -> { 1 } -> { 2 } -> { 3 } -> NULL');
   });
 
+  it('insertBefore() should throw error if linked list is empty', () => {
+    try {
+      let list = new LinkedList();
+      list.insertBefore(2, 34);
+    } catch (error) {
+      expect(error).toEqual(new CustomError('Linked List is empty!'));
+    }
+  });
+
   it('insertAfter() in the middle', () => {
     let list = new LinkedList();
     let first = 1;

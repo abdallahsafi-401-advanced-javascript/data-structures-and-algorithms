@@ -69,13 +69,17 @@ class LinkedList {
 
   //add a new node with the given newValue immediately before the first value node
   insertBefore(value, newVal) {
-    const node = new Node(newVal);
-    if (!this.head) {
-      this.head = node;
-      return this;
+    // checking edge cases
+    if (!(value && newVal)) {
+      throw new CustomError('Invalid areguments!');
+    } else if (this.size === 0) {
+      throw new CustomError('Linked List is empty!');
+    } else if (!this.include(value)) {
+      throw new CustomError('Linked List does not have the value!');
     }
+    const node = new Node(newVal);
     let current = this.head;
-    if (current.value === value) {
+    if (current.value === value) { // checking if the head is the value we are searching for
       node.next = this.head;
       this.head = node;
       return this;
@@ -89,12 +93,20 @@ class LinkedList {
       }
       current = current.next;
     }
-    
+
     return this;
   }
 
   //add a new node with the given newValue immediately before the first value node
   insertAfter(value, newVal) {
+    // checking edge cases
+    if (!(value && newVal)) {
+      throw new CustomError('Invalid areguments!');
+    } else if (this.size === 0) {
+      throw new CustomError('Linked List is empty!');
+    } else if (!this.include(value)) {
+      throw new CustomError('Linked List does not have the value!');
+    }
     const node = new Node(newVal);
     let current = this.head;
     while (current) {
@@ -108,8 +120,6 @@ class LinkedList {
     }
     return this;
   }
-
-
 }
 
 module.exports = LinkedList;
