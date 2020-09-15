@@ -74,6 +74,7 @@ describe('LinkedList Module', () => {
     let third = 3;
     list.append(third);
     list.insertBefore(2, 34);
+    console.log('ll inserbef',list);
     expect(list.toString()).toEqual('{ 1 } -> { 34 } -> { 2 } -> { 3 } -> NULL');
   });
 
