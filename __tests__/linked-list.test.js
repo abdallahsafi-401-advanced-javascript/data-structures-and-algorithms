@@ -141,4 +141,19 @@ describe('LinkedList Module', () => {
       expect(error).toEqual(new CustomError('this linked list is empty!'));
     }
   });
+
+  it('kthFromEnd() works proberly', () => {
+    let list = new LinkedList();
+    let first = 1;
+    list.append(first);
+    let second = 3;
+    list.append(second);
+    let third = 8;
+    list.append(third);
+    let fourth = 2;
+    list.append(fourth);
+    expect(list.kthFromEnd(2)).toEqual(3);
+  });
+
+
 });
