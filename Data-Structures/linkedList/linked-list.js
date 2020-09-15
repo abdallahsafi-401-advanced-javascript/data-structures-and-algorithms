@@ -120,6 +120,22 @@ class LinkedList {
     }
     return this;
   }
+
+
+  kthFromEnd(k){
+    if(this.size < k || k < 0){
+      throw new CustomError( 'Not in the list!');
+    }
+    let current = this.head;
+    let counter = this.size - k -1;
+    while(counter > 0){
+      console.log('counter >>>', counter);
+      current = current.next;
+      counter--;
+    }
+    return current.value;
+  }   
 }
+  
 
 module.exports = LinkedList;
