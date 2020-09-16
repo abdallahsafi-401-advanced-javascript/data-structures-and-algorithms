@@ -6,7 +6,7 @@ function reverseLinkedList(list) {
   let newLinkedList = new linkedlist();
   let current = list.head;
   while (current) {
-    newLinkedList.insert(current);
+    newLinkedList.insert(current.value);
     current = current.next;
   }
   return newLinkedList;
