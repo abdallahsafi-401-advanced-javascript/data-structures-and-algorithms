@@ -18,4 +18,5 @@
 --------- | ------------- 
  1 | [linked List](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/Data-Structures/linkedList) 
  2 | [Zip two linked lists](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/Data-Structures/llZip) 
+ 3 | [Reverse a linked list](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/Data-Structures/reverseLinkedList) 
  

@@ -11,6 +11,7 @@ describe('reverseLinkedList Module', () => {
     list.append(2);
     list.append(3);
     let newList = reverseLinkedList.reverseLinkedList(list);
+    console.log('newList >>>>', newList);
     expect(newList.toString()).toEqual(
       '{ 3 } -> { 2 } -> { 1 } -> NULL',
     );
@@ -26,31 +27,5 @@ describe('reverseLinkedList Module', () => {
       '{ c } -> { b } -> { a } -> NULL',
     );
   });
-  //   it('llZip()  should work proberly', () => {
-  //     let firstList = new LinkedList();
-  //     firstList.append(1);
-  //     firstList.append(3);
-  //     let secondList = new LinkedList();
-  //     secondList.append(5);
-  //     secondList.append(9);
-  //     secondList.append(4);
-  //     let newList = llZip.zipLists(firstList, secondList);
-  //     expect(newList.toString()).toEqual(
-  //       '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 4 } -> NULL',
-  //     );
-  //   });
 
-  //   it('llZip()  should work proberly ', () => {
-  //     let firstList = new LinkedList();
-  //     firstList.append(1);
-  //     firstList.append(3);
-  //     firstList.append(2);
-  //     let secondList = new LinkedList();
-  //     secondList.append(5);
-  //     secondList.append(9);
-  //     let newList = llZip.zipLists(firstList, secondList);
-  //     expect(newList.toString()).toEqual(
-  //       '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> NULL',
-  //     );
-  //   });
 });
