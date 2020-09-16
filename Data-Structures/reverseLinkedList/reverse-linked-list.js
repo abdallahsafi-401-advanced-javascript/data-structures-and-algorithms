@@ -1,15 +1,17 @@
 'use strict';
 
-const linkedlist = require('../linkedList/linked-list.js');
-
-function reverseLinkedList(list) {
-  let newLinkedList = new linkedlist();
-  let current = list.head;
-  while (current) {
-    newLinkedList.insert(current);
-    current = current.next;
+// reverse a linked list  
+function  reverseLinkedList(list){
+  var current = list.head;
+  var previous = null;
+  while(current) {
+    var save = current.next;
+    current.next = previous;
+    previous = current;
+    current = save;
   }
-  return newLinkedList;
+  list.head = previous;
+  return list; 
 }
 
 module.exports.reverseLinkedList = reverseLinkedList;
