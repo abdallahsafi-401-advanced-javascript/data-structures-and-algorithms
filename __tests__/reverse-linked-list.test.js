@@ -16,6 +16,16 @@ describe('reverseLinkedList Module', () => {
     );
   });
 
+  it('reverseLinkedList() should work properly ', () => {
+    let list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    let newList = reverseLinkedList.reverseLinkedList(list);
+    expect(newList.toString()).toEqual(
+      '{ c } -> { b } -> { a } -> NULL',
+    );
+  });
   //   it('llZip()  should work proberly', () => {
   //     let firstList = new LinkedList();
   //     firstList.append(1);
