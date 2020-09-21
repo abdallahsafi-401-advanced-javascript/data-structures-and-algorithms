@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-const CustomError = require("./customError.js");
-const Stack = require("../stacksAndQueues/stacks.js");
+const CustomError = require('./customError.js');
+const Stack = require('../stacksAndQueues/stacks.js');
 
 class PseudoQueue {
   constructor() {
@@ -11,7 +11,7 @@ class PseudoQueue {
 
   enqueue(value) {
     if (!value) {
-      throw new CustomError("Invalid argument!");
+      throw new CustomError('Invalid argument!');
     }
     this.storage1.push(value);
   }
