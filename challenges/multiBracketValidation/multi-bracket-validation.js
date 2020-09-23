@@ -29,28 +29,27 @@ let Stack = require('../../Data-Structures/stacksAndQueues/stacks.js');
 
 //solution with stacks
 
-function multiBracketValidation(input){
-  if(input==null){
+function multiBracketValidation(input) {
+  if (input == null) {
     return true;
   }
 
   let stack = new Stack();
-  for (let i = 0; i <input.length ; i++) {
+  for (let i = 0; i < input.length; i++) {
     let c = input.charAt(i);
-    if(c=='('){
+    if (c == '(') {
       stack.push(')');
     }
-    if(c=='['){
+    if (c == '[') {
       stack.push(']');
     }
-    if(c=='{'){
+    if (c == '{') {
       stack.push('}');
-    }else if (c==')' || c=='}' || c==']' ){
-      if(stack.isEmpty() || stack.pop()!=c)
-        return false;
+    } else if (c == ')' || c == '}' || c == ']') {
+      if (stack.isEmpty() || stack.pop() != c) return false;
     }
   }
   return stack.isEmpty();
-} 
+}
 
 module.exports.multiBracketValidation = multiBracketValidation;
