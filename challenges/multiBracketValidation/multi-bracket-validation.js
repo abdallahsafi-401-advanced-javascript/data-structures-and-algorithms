@@ -1,17 +1,26 @@
 'use strict';
 
-function multiBracketValidation(input){
-  let round = [];
-  let square = [];
-  let curly = [];
-  input.forEach(e => {
-    if(e ==='(' || e === ')'){
-      round.push(e);
-    }else if(e ==='[' || e === ']'){
-      square.push(e);
-    }else if( e ==='{' || e === '}'){
-      curly.push(e);
-    }
-  });
+function multiBracketValidation(str) {
+  const checker = [];
 
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === '(' || str[i] === '{' || str[i] === '[') {
+      checker.push(str[i]);
+    }
+    if (
+      (str[i] === ')' && checker[checker.length - 1] === '(') ||
+      (str[i] === '}' && checker[checker.length - 1] === '{') ||
+      (str[i] === ']' && checker[checker.length - 1] === '[')
+    ) {
+      checker.pop();
+    } else if (
+      (str[i] === ')' && checker[checker.length - 1] !== '(') ||
+      (str[i] === '}' && checker[checker.length - 1] !== '{') ||
+      (str[i] === ']' && checker[checker.length - 1] !== '[')
+    ) {
+      return false;
+    }
+  }
+  if (checker.length === 0) return true;
+  return false;
 }
