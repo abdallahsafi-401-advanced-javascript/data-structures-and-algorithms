@@ -1,0 +1,67 @@
+# Trees
+
+tree is a collection of nodes connected by some edges. A tree is a non linear data structure. A Binary Search tree is a binary tree in which nodes that have lesser value are stored on the left while the nodes with a higher value are stored at the right.
+
+## Challenge
+
+Create tree class with adding metode and implement depth traverse methods.
+
+## Approach & Efficiency
+
+- Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
+- Create a BinaryTree class
+- Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
+- Any exceptions or errors that come from your code should be semantic, capturable errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
+
+- Create a BinarySearchTree class
+- Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
+- Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
+
+### Bog O
+
+- add() -> time: O(h)
+- preOrder() -> time: O(n)
+- inOrder() -> time: O(n)
+- postOrder() -> time: O(n)
+- search() -> time O(h)
+
+## API
+
+- Create a new tree
+
+```javascript
+var Bst = new BinarySearchTree();
+```
+
+- Insert new value to your tree
+
+```javascript
+Bst.add(value);
+```
+
+- Search for specific value
+
+```javascript
+Bst.contains(value);
+```
+
+- Performs preorder traversal of a tree 
+
+```javascript
+Bst.preOrder();
+```
+
+- Performs inorder traversal of a tree 
+
+```javascript
+Bst.inOrder();
+```
+
+- Performs postorder traversal of a tree 
+
+```javascript
+Bst.postOrder();
+```
+
+# Test
+![image](../../assets/treeTest.PNG)

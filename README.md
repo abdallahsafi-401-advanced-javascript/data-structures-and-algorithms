@@ -21,5 +21,6 @@ master/challenges/matrixSum)
  2 | [Zip two linked lists](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/Data-Structures/llZip) 
  3 | [Reverse a linked list](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/Data-Structures/reverseLinkedList)
  4 | [Stacks and Queues](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/Data-Structures/stacksAndQueues) 
+ 5 | [Trees](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/Data-Structures/tree) 
   
  
