@@ -6,17 +6,17 @@ describe('BinarySearchTree Module', () => {
   it('preOrder()', () => {
     var Bst = new BinarySearchTree();
 
-    // Inserting nodes to the BinarySearchTree
-    Bst.insert(15);
-    Bst.insert(25);
-    Bst.insert(10);
-    Bst.insert(7);
-    Bst.insert(22);
-    Bst.insert(17);
-    Bst.insert(13);
-    Bst.insert(5);
-    Bst.insert(9);
-    Bst.insert(27);
+    // adding nodes to the BinarySearchTree
+    Bst.add(15);
+    Bst.add(25);
+    Bst.add(10);
+    Bst.add(7);
+    Bst.add(22);
+    Bst.add(17);
+    Bst.add(13);
+    Bst.add(5);
+    Bst.add(9);
+    Bst.add(27);
 
     //          15
     //         /  \
@@ -39,17 +39,17 @@ describe('BinarySearchTree Module', () => {
   it('inOrder()', () => {
     var Bst = new BinarySearchTree();
 
-    // Inserting nodes to the BinarySearchTree
-    Bst.insert(15);
-    Bst.insert(25);
-    Bst.insert(10);
-    Bst.insert(7);
-    Bst.insert(22);
-    Bst.insert(17);
-    Bst.insert(13);
-    Bst.insert(5);
-    Bst.insert(9);
-    Bst.insert(27);
+    // adding nodes to the BinarySearchTree
+    Bst.add(15);
+    Bst.add(25);
+    Bst.add(10);
+    Bst.add(7);
+    Bst.add(22);
+    Bst.add(17);
+    Bst.add(13);
+    Bst.add(5);
+    Bst.add(9);
+    Bst.add(27);
 
     //          15
     //         /  \
@@ -73,17 +73,17 @@ describe('BinarySearchTree Module', () => {
   it('postOrder()', () => {
     var Bst = new BinarySearchTree();
 
-    // Inserting nodes to the BinarySearchTree
-    Bst.insert(15);
-    Bst.insert(25);
-    Bst.insert(10);
-    Bst.insert(7);
-    Bst.insert(22);
-    Bst.insert(17);
-    Bst.insert(13);
-    Bst.insert(5);
-    Bst.insert(9);
-    Bst.insert(27);
+    // adding nodes to the BinarySearchTree
+    Bst.add(15);
+    Bst.add(25);
+    Bst.add(10);
+    Bst.add(7);
+    Bst.add(22);
+    Bst.add(17);
+    Bst.add(13);
+    Bst.add(5);
+    Bst.add(9);
+    Bst.add(27);
 
     //          15
     //         /  \
@@ -94,6 +94,7 @@ describe('BinarySearchTree Module', () => {
     //    5   9  17
     expect(Bst.postOrder()).toEqual([5, 9, 7, 13, 10, 17, 22, 27, 25, 15]);
   });
+
   it('postOrder() throw error if tree is empty', () => {
     var Bst = new BinarySearchTree();
     try {
@@ -102,20 +103,21 @@ describe('BinarySearchTree Module', () => {
       expect(error).toEqual(new Error('tree is empty'));
     }
   });
-  it('search()', () => {
+
+  it('contains()', () => {
     var Bst = new BinarySearchTree();
 
-    // Inserting nodes to the BinarySearchTree
-    Bst.insert(15);
-    Bst.insert(25);
-    Bst.insert(10);
-    Bst.insert(7);
-    Bst.insert(22);
-    Bst.insert(17);
-    Bst.insert(13);
-    Bst.insert(5);
-    Bst.insert(9);
-    Bst.insert(27);
+    // adding nodes to the BinarySearchTree
+    Bst.add(15);
+    Bst.add(25);
+    Bst.add(10);
+    Bst.add(7);
+    Bst.add(22);
+    Bst.add(17);
+    Bst.add(13);
+    Bst.add(5);
+    Bst.add(9);
+    Bst.add(27);
 
     //          15
     //         /  \
@@ -125,8 +127,9 @@ describe('BinarySearchTree Module', () => {
     //     / \    /
     //    5   9  17
     let root = Bst.getRootNode();
-    expect(Bst.search(root, 13)).toBeTruthy();
+    expect(Bst.contains(root, 13)).toBeTruthy();
   });
+
   it('getRootNode() throw error if tree is empty', () => {
     var Bst = new BinarySearchTree();
     try {
@@ -135,10 +138,11 @@ describe('BinarySearchTree Module', () => {
       expect(error).toEqual(new Error('tree is empty'));
     }
   });
-  it('search() throw error if tree is empty', () => {
+  
+  it('contains() throw error if tree is empty', () => {
     var Bst = new BinarySearchTree();
     try {
-      Bst.search(null, 13);
+      Bst.contains(null, 13);
     } catch (error) {
       expect(error).toEqual(new Error('tree is empty'));
     }

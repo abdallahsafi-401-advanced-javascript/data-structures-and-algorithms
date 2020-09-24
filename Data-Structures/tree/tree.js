@@ -6,32 +6,43 @@ class BinarySearchTree {
   constructor() {
     this.root = null;
   }
-  insert(value) {
+  /**
+   * add to tree
+   * @param {*} value 
+   */
+  add(value) {
     var newNode = new Node(value);
     if (this.root === null) {
       this.root = newNode;
     } else {
-      this.insertNode(this.root, newNode);
+      this.addNode(this.root, newNode);
     }
   }
 
-  insertNode(node, newNode) {
+  /**
+   * helper method for adding to tree 
+   * @param {*} node 
+   * @param {*} newNode 
+   */
+  addNode(node, newNode) {
     if (newNode.value < node.value) {
       if (!node.left) {
         node.left = newNode;
       } else {
-        this.insertNode(node.left, newNode);
+        this.addNode(node.left, newNode);
       }
     } else {
       if (!node.right) {
         node.right = newNode;
       } else {
-        this.insertNode(node.right, newNode);
+        this.addNode(node.right, newNode);
       }
     }
   }
 
-  // returns root of the tree
+  /**
+   * returns root of the tree
+   */
   getRootNode() {
     if (this.root == null) {
       throw new Error('tree is empty');
@@ -39,7 +50,10 @@ class BinarySearchTree {
     return this.root;
   }
 
-  // Performs preorder traversal of a tree
+  
+  /**
+   * Performs preorder traversal of a tree 
+   */
   preOrder() {
     if (this.root == null) {
       throw new Error('tree is empty');
@@ -55,7 +69,9 @@ class BinarySearchTree {
     return output;
   }
 
-  // Performs inorder traversal of a tree
+  /**
+   * Performs inorder traversal of a tree
+   */
   inOrder() {
     if (this.root == null) {
       throw new Error('tree is empty');
@@ -71,7 +87,9 @@ class BinarySearchTree {
     return output;
   }
 
-  // Performs postorder traversal of a tree
+  /**
+   * Performs postorder traversal of a tree
+   */
   postOrder() {
     if (this.root == null) {
       throw new Error('tree is empty');
@@ -86,14 +104,18 @@ class BinarySearchTree {
     return output;
   }
 
-  // search for given value
-  search(node, value) {
+  /**
+   * search for given value
+   * @param {object} node 
+   * @param {*} value 
+   */
+  contains(node, value) {
     if (node === null) {
       throw new Error('tree is empty');
     } else if (value < node.value) {
-      return this.search(node.left, value);
+      return this.contains(node.left, value);
     } else if (value > node.value) {
-      return this.search(node.right, value);
+      return this.contains(node.right, value);
     } else {
       return !!node;
     }
