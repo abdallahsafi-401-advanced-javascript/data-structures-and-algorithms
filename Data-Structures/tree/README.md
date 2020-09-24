@@ -64,4 +64,4 @@ Bst.postOrder();
 ```
 
 # Test
-![image](../../assets/treeTest.PNG)
+![image](../../assets/treeTest.png)
