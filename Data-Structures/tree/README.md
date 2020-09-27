@@ -27,10 +27,11 @@ Create tree class with adding metode and implement depth traverse methods.
 
 ## API
 
-- Create a new tree
+
+- Create a new binary search tree
 
 ```javascript
-var Bst = new BinarySearchTree();
+var Bst = new BinaryTree();
 ```
 
 - Insert new value to your tree
@@ -45,23 +46,62 @@ Bst.add(value);
 Bst.contains(value);
 ```
 
+- Create a new binary tree
+
+```javascript
+var Bt = new BinaryTree();
+```
+
 - Performs preorder traversal of a tree 
 
 ```javascript
-Bst.preOrder();
+Bt.preOrder();
 ```
 
 - Performs inorder traversal of a tree 
 
 ```javascript
-Bst.inOrder();
+Bt.inOrder();
 ```
 
 - Performs postorder traversal of a tree 
 
 ```javascript
-Bst.postOrder();
+Bt.postOrder();
 ```
 
-# Test
-![image](../../assets/treeTest.png)
+- find the maximum number in a binary tree 
+
+```javascript
+Bt.findMax();
+```
+
+# Class 16 : Find the Maximum Value in a Binary Tree
+
+## Challenge
+
+Create a method that return a maximum number in a given value.
+
+
+## Approach & Efficiency
+
+- Create a methode called findMax.
+- assign max variable with root value.
+- traverse left and right while not null.
+- every time we traverse we check the value againest the max
+- at the end return the max.
+
+- big o: 
+1. space o(1)
+2. time o(n)
+
+
+## whiteboard
+
+![img](../../assets/findMax1.JPG)
+![img](../../assets/findMax2.JPG)
+
+
+
+
+
