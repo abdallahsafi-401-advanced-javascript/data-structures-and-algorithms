@@ -24,6 +24,7 @@ describe('BinaryTree Module', () => {
     three.right = five;
     three.left = four;
     tree = new BinaryTree(one);
+    
   });
 
   it('preOrder()', () => {
@@ -87,6 +88,13 @@ describe('BinaryTree Module', () => {
     } catch (error) {
       expect(error).toEqual(new Error('tree is empty'));
     }
+  });
+
+  it('Bft()', () => {
+    // let expected = [8, 9, 7, 6, 2, 4, 5, 3, 1];
+    let traverseBFS = tree.traverseBFS();
+    console.log('traverseBFS ------->', traverseBFS);
+    // expect(postOrderOutput).toEqual(expected);
   });
 
 });
