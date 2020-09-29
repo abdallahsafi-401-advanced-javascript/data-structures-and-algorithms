@@ -11,7 +11,8 @@
  3 | [Code Challenge 03: Binary Search](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/arrayBinarySearch) 
  4 | [Code Challenge 04: Matrix Sum](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/matrixSum)
  5 | [Code Challenge 05: linked list](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/linkedList) 
- 5 | [Code Challenge 13: Multi-bracket Validation](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/multiBracketValidation) 
+ 6 | [Code Challenge 13: Multi-bracket Validation](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/multiBracketValidation) 
+ 7 | [Code Challenge 18: FizzBuzz](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/fizzBuzzTree) 
 
  
  ## Table of Data structure:
