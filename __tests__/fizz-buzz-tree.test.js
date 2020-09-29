@@ -53,7 +53,7 @@ describe('FizzBuzzTree Module', () => {
     expect(fizzBuzzTree.fizzBuzzTree(tree)['FizzBuzz']).toEqual([
       'Fizz',
       'FizzBuzz',
-      4,
+      '4',
       'Buzz',
       'Buzz',
       'Fizz',
@@ -61,7 +61,7 @@ describe('FizzBuzzTree Module', () => {
     expect(fizzBuzzTree.fizzBuzzTree(tree)['tree']).toEqual([
       'Fizz',
       'FizzBuzz',
-      4,
+      '4',
       'Buzz',
       'Buzz',
       'Fizz',

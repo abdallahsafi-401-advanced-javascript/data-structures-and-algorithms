@@ -1,7 +1,7 @@
 'use strict';
 
 function fizzBuzzTree(tree) {
-  if (tree.root == null) {
+  if (tree.root.value === null) {
     throw new Error('tree is empty');
   }
   let outputTree = [];
@@ -15,7 +15,7 @@ function fizzBuzzTree(tree) {
           ? (node.value = 'Fizz')
           : node.value % 5 === 0
             ? (node.value = 'Buzz')
-            : node.value;
+            : node.value = String(node.value);
       outputFizzBuzz.push(node.value);
       for (let i = 0; i < node.children.length; i++) {
         node.children.length && _traverse(node.children[i]);
