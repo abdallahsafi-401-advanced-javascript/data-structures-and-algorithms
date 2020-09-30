@@ -36,4 +36,4 @@ Comparing two file different file directories, create a method that takes in 2 d
 
 # Implemtation
 
-[code](./file-folder)
+[code](./file-folder.js)
