@@ -3,9 +3,9 @@
 function mergeSort(arr) {
   let n = arr.length;
   if (n > 1) {
-    let mid = Math.ceil(n / 2);
+    let mid = Math.floor(n / 2);
     let left = arr.slice(0, mid);
-    let right = arr.slice(mid, n);
+    let right = arr.slice(mid);
     console.log('left', left);
     console.log('right', right);
     mergeSort(left);
