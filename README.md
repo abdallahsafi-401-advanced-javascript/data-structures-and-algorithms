@@ -13,9 +13,6 @@
  5 | [Code Challenge 05: linked list](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/linkedList) 
  6 | [Code Challenge 13: Multi-bracket Validation](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/multiBracketValidation) 
  7 | [Code Challenge 18: FizzBuzz](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/fizzBuzzTree) 
- 8 | [Code Challenge 26: Insertion Sort](https://github.com/abdallahsafi-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/insertionSort) 
-
-
 
  
  ## Table of Data structure:
