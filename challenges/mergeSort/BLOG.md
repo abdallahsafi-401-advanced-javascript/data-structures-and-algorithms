@@ -15,5 +15,5 @@ big o:
 -  Space: O(n)
 
 ## Solution
-<!-- ![image](../../assets/insertSort-1.JPG) -->
+![image](../../assets/merge-sort.JPG)
 
