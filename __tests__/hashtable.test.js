@@ -26,7 +26,7 @@ describe('hashtable tests', () => {
   });
 
   it('can hash keys to an in-range value', () => {
-    const table = new Hashtable();
+    const table = new Hashtable(1024);
     const hashZZ = table.hash('ZZZZZZZYYYYYYYXXXX');
     expect(hashZZ >= 0 && hashZZ < 1024).toBeTruthy();
   });
