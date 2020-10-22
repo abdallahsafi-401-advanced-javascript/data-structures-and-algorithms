@@ -2,7 +2,7 @@
  write a function that will determine if the given string is full of unique characters.
 
  **input**: String
- 
+
  **output**: boolean
 
  ## visual 
@@ -25,6 +25,10 @@
 - Create new hastable using the length of the string
 - Iterate over the char of the string and excute a condition if the hashtable contain it return false and breaks the loop else add to hahtable
 - if the loop done will return true
+
+## Big O
+- time: O(n)
+- space: O(n)
 
 ## code
 
