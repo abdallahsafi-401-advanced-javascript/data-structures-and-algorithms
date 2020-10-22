@@ -1,7 +1,8 @@
-# Problem Domain
+## Problem Domain
  write a function that will determine if the given string is full of unique characters.
 
  **input**: String
+ 
  **output**: boolean
 
  ## visual 
